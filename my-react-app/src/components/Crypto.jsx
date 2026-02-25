@@ -7,7 +7,7 @@ const Crypto = ({bgColor, icon, price, name, change, isPositive}) => {
 
 {/* Top row */}
 <div className="flex justify-between items-center mb-6">
-    <div className={`w-12 h-12 ${bgColor} flex items-center justify-content rounded-lg`}>
+    <div className={`w-12 h-12 ${bgColor} flex items-center justify-centert rounded-lg`}>
         {icon}
     </div>
 
@@ -18,7 +18,7 @@ const Crypto = ({bgColor, icon, price, name, change, isPositive}) => {
             <FaArrowDown className="text-orange-400 text-sm" />
         )}
 
-        <span className={`text-sm font-semibold ${isPositive ? "text-green-500" : "text-orange"}`}>
+        <span className={`text-sm font-semibold ${isPositive ? "text-green-500" : "text-orange-400"}`}>
             {change}
         </span>
     </div>
