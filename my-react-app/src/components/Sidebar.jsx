@@ -20,12 +20,12 @@ const menuItems = [
 
 const Sidebar = () => {
     return (
-        <div className="w-64 bg-gray-900 text-white h-screen flex flex-col justify-between p-6">
+        <div className="w-64 bg-gray-100 text-gray-700 h-screen flex flex-col justify-between p-6">
 
             {/* Logo */}
             <div className="flex items-center space-x-2 mb-10">
-                <div className="w-10 h-10 bg-purple-600 flex items-center justify-center rounded">
-                   <GiChainlink className="text-purple-600 w-6 h-6"/> 
+                <div className="w-10 h-10 flex items-center justify-center">
+                   <GiChainlink className="text-purple-600 w-7 h-7"/> 
                 </div>
                 <span className="text-xl font-bold">CryptX</span>
             </div>
@@ -33,15 +33,15 @@ const Sidebar = () => {
             {/* Menu Items */}
             <nav className="flex flex-col space-y-4">
                 {menuItems.map((item, idx) => (
-                    <div key={idx} className={`flex items-center justify-between p-2 rounded hover:bg-gray-700 cursor-pointer ${item.active ? "bg-purple-700" : ""}`}>
+                    <div key={idx} className={`flex items-center justify-between p-2 rounded-lg hover:bg-gray-200 cursor-pointer ${item.active ? "text-purple-600 font-medium" : "text-gray-500"}`}>
                         <div className="flex items-center space-x-3">
-                            <span className={`text-lg ${item.active ? "text-white" : "text-gray-400"}`}>
+                            <span className={`text-lg ${item.active ? "text-purple-600" : "text-gray-400"}`}>
                                 {item.icon}</span>
-                            <span className={`${item.active ? "text-white" : "text-gray-400"} `}>
+                            <span className={`${item.active ? "text-purple-600" : "text-gray-500"}`}>
                              {item.name}
                             </span>
                             </div>
-                            {item.active && <span className="w-2 h-2 bg-purple-400 rounded-full"></span>}
+                            {item.active && <span className="w-2 h-2 bg-purple-500 rounded-full"></span>}
                             </div>
                 ))}
 
