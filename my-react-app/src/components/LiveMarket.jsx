@@ -34,4 +34,39 @@ const LiveMarket = () => {
             isPositive: false,
         },
     ];
+
+    return (
+        <div className="bg-white rounded-2x1 shadow-md p-6 h-full flex flex-col">
+        
+        <h2 className="text-lg font-semibold text-gray-800 mb-4">Live Market</h2>
+
+        <div className="space-y-4">
+            {marketData.map((coin,index) => (
+                <div key={index} className="flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                        {coin.icon}
+                        <span className="text-sm font-medium text-gray-700">
+                            {coin.name}
+                        </span>
+                    </div>
+
+                    <div className="text-right">
+                        <p className="text-sm font-semibold text-gray-800">
+                            {coin.price}
+                        </p>
+                        <p className={`text-xs font-medium ${
+                            coin.isPositive 
+                            ? "text-green-500"
+                            : "text-orange-400"
+                        }`} >
+                            {coin.change}
+                        </p>
+                    </div>
+                </div>
+            ))}
+        </div>
+        </div>
+    );
 }
+
+export default LiveMarket 
