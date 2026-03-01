@@ -1,8 +1,9 @@
 import React from "react";
+import TransactionItem from "./TransactionItem"
 
 const Transactions = () => {
 
-    const transactionData = [
+    const transactions = [
         {
             name: "Ethereum",
             type: "Received",
@@ -33,54 +34,18 @@ const Transactions = () => {
         },
     ];
     return (
-        <div className="mt-10">
+       <div className="mt-10">
 
-            <h2 className="text-xl font-semibold text-gray-800 mb-6">
-                Transactions
-            </h2>
+        <h2 className="text-xl font-semibold text-gray-800 mb-4">Transactions</h2>
 
-            <div className="space-y-6">
-                {transactionData.map((tx, index) => (
-             <div key={index} className="flex items-center justify-between">
-
-                <div className="flex items-center space-x-4">
-
-                    <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                        tx.isPositive
-                        ? "bg-green-100"
-                        : "bg-orange-100"
-                    }`}>
-                        {tx.isPositve ? (
-                            <FaArrowUp className="text-green-500 text-sm" />
-                        ) : (
-                            <FaArrowDown className="text-orange-400 text-sm" />
-                        )}
-                    </div>
-
-                    <div>
-                        <p className="text-sm font-semibold text-gray-800">
-                            {tx.name}
-                        </p>
-                        <p className="text-xs text-gray-400">
-                            {tx.type}
-                        </p>
-                    </div>
-                </div>
-
-                <div className="text-right">
-                    <p className="text-sm font-semibold text-gray-800">
-                            {tx.amount}
-                        </p>
-                        <p className="text-xs text-gray-400">
-                            {tx.time}
-                        </p>
-                </div>
-             </div>
-                ))}
-            </div>
+        <div className="space-y-6">
+            {transactions.map((tx, index) => (
+                <TransactionItem key={index} {...tx} />
+            ))}
+        </div>
 
         </div>
-    )
+    );
 };
 
 export default Transactions
