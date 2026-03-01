@@ -1,6 +1,6 @@
 import React from "react";
 import{ FaBitcoin, FaEthereum } from "react-icons/fa";
-import{ SiLitecoin, SiCardano } from "react-icons/Si"
+import{ SiLitecoin, SiCardano } from "react-icons/si"
 import Crypto from "./Crypto"
 
 const SummaryCards = () => {
