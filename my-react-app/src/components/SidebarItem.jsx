@@ -1,18 +1,25 @@
 import React from "react";
 
-const SidebarItem = ({ icon: Icon, label, active}) => {
+
+const SidebarItem = (active, label) => {
     return(
 
-    <div className={`flex items-center space-x-3 px-4 py-3 rounded-xl cursor-pointer transition-all ${
+    <div className={`flex items-center justify-between cursor-pointer ${
         active
-        ? "bg-purple-600 text-white"
-        : "text-gray-400 hover:bg-gray-100 hover:text-gray-700"
+        ? "text-purple-600 font-medium"
+        : "text-gray-400 hover:text-gray-600"
     }`} >
 
+       <div className="flex items-center space-x-4">
         <Icon className="text-lg" />
-        <span className="text-sm font-medium">
+        <span className="text-sm">
             {label}
         </span>
+        </div>
+
+        {active && (
+            <span className="w-2 h-2 bg-purple-600 rounded-full" />
+        )}
     </div>
     );
 };
