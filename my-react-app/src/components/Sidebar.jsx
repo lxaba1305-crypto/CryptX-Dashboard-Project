@@ -8,7 +8,7 @@ import {
     FaCog,
     FaSignOutAlt
 } from 'react-icons/fa';
-import { GiChainlink } from 'react-icons/gi';
+import { FaLink } from 'react-icons/fa';
 
 const menuItems = [
     { name: 'Overview', icon: FaTh, active: true },
@@ -26,7 +26,7 @@ const Sidebar = () => {
             {/* Logo */}
             <div>
                 <div className="flex items-center space-x-3 mb-12">
-                    <GiChainlink className="text-purple-600 w-8 h-8" />
+                    <FaLink className="text-purple-600 w-8 h-8" />
                     <span className="text-2xl font-semibold text-gray-900">CryptX</span>
                 </div>
 
