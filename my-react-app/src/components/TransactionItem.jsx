@@ -1,0 +1,43 @@
+import React from "react";
+import { FaArrowUp, FaArrowDown } from "react-icons/fa";
+
+const TransactionItem = ({ name, type, amount, time, isPositive }) => {
+    return (
+        <div className="flex items-center justify-between">
+
+            {/* Left */}
+
+            <div className="flex items-center spacce-x-4">
+
+                <div className={`w-10 h-10 rounded-full flex items-center justify-center ${isPositive ? "bg-green-100" : "bg-orange-100"}`}>
+                    {isPositive ? (
+                        <FaArrowUp className="text-green-500 text-sm" />
+                    ) : (
+                        <FaArrowDown className="text-orange-400 text-sm" />
+                    )}
+                </div>
+
+                <div>
+                    <p className="text-sm font-semibold text-gray-800">
+                        {name}
+                    </p>
+                    <p className="text-xs text-gray-400">
+                        {type}
+                    </p>
+                </div>
+            </div>
+
+            {/* Right */}
+            <div className="text-right">
+                <p className="text--sm font-semibold text-gray-800">
+                    {amount}
+                </p>
+                <p className="text-xs text-gray-400">
+                    {time}
+                </p>
+            </div>
+        </div>
+    );
+};
+
+export default TransactionItem
