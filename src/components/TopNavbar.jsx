@@ -1,5 +1,4 @@
 import React from 'react'
-import {FaBell, FaQuestionCircle} from "react-icons/fa"
 
 const TopNavbar = () => {
     return (
@@ -13,8 +12,8 @@ const TopNavbar = () => {
 {/* Profile icon */}
 <div className="flex items-center space-x-4">
 
-  <FaBell className="text-gray-500 w-5 h-5 cursor-pointer" />
-  <FaQuestionCircle className="text-gray-500 w-5 h-5 cursor-pointer" />
+  <span className="text-gray-500 text-lg cursor-pointer">🔔</span>
+  <span className="text-gray-500 text-lg cursor-pointer">❓</span>
 
   {/* Avatar */}
   <div className="w-10 h-10 bg-gray-300 rounded-full"></div>
