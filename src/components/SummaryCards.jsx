@@ -1,6 +1,4 @@
 import React from "react";
-import{ FaBitcoin, FaEthereum } from "react-icons/fa";
-import{ SiLitecoin, SiCardano } from "react-icons/si"
 import Crypto from "./Crypto"
 
 const SummaryCards = () => {
@@ -8,7 +6,7 @@ const SummaryCards = () => {
     const cryptoData = [
         {
             bgColor: "bg-yellow-400",
-            icon: <FaBitcoin className="text-white text-xl" />,
+            icon: <span className="text-white text-xl">₿</span>,
             price: "$40,291",
             name: "Bitcoin - BTC",
             change: "+0.25%",
@@ -16,7 +14,7 @@ const SummaryCards = () => {
         },
         {
             bgColor: "bg-purple-500",
-            icon: <FaEthereum className="text-white text-xl" />,
+            icon: <span className="text-white text-xl">Ξ</span>,
             price: "$18,291",
             name: "Ethereum - ETH",
             change: "+0.25%",
@@ -24,7 +22,7 @@ const SummaryCards = () => {
         },
         {
             bgColor: "bg-blue-400",
-            icon: <SiLitecoin className="text-white text-xl" />,
+            icon: <span className="text-white text-xl">Ł</span>,
             price: "$8,291",
             name: "Litecoin - LTC",
             change: "+0.25%",
@@ -32,7 +30,7 @@ const SummaryCards = () => {
         },
         {
             bgColor: "bg-green-400",
-            icon: <SiCardano className="text-white text-xl" />,
+            icon: <span className="text-white text-xl">₳</span>,
             price: "$40,291",
             name: "Cardano - ADA",
             change: "-2.05%",
