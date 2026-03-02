@@ -21,7 +21,7 @@ const menuItems = [
 
 const Sidebar = () => {
     return (
-        <div className="w-64 bg-gray-50 h-screen flex flex-col justify-between px-8 py-8 border-r border-gray-200">
+        <div className="w-64 bg-gray-50 flex flex-col justify-between px-8 py-8 border-r border-gray-200">
 
             {/* Logo */}
             <div>

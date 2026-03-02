@@ -9,32 +9,38 @@ import './App.css'
 
 function App() {
   return (
-    
-         <div className="flex h-screen bg-gray-100">
+    <div className="flex min-h-screen bg-gray-100">
+      
       <Sidebar />
-      <div className="flex-1 flex flex-col bg-gray-100">
+
+      {/* RIGHT SIDE */}
+      <div className="flex-1 flex flex-col">
+
+        {/* Top Navbar */}
         <TopNavbar />
-        <main className="flex-1 p-6 bg-gray-100">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-                      <div className="xl:col-span-2 space-y-6">
-                    <SummaryCards />
-                     <LiveMarket />
-                      </div>
+        {/* Main Content */}
+        <main className="flex-1 p-6">
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
 
+            {/* LEFT */}
+            <div className="xl:col-span-2 space-y-6">
+              <SummaryCards />
+              <LiveMarket />
+            </div>
 
-            <div className="space-y-6">
+            {/* RIGHT */}
+            <div className="xl:col-span-1 space-y-6">
               <Graph />
               <Transactions />
             </div>
 
           </div>
-
         </main>
-          </div>
-        </div>
-      
-    )
+
+      </div>
+    </div>
+  );
 }
 
 export default App

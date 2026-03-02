@@ -1,42 +1,55 @@
 import React from "react";
 import {FaBitcoin, FaEthereum} from "react-icons/fa";
 import{ SiLitecoin, SiCardano } from "react-icons/si";
+import {
+    LineChart,
+    Line,
+    ResponsiveContainer
+} from "recharts";
 
 const LiveMarket = () => {
 
     const marketData = [
-        {
-            icon: <FaBitcoin className="text-yellow-400 text-lg" />,
-            name: "Bitcoin",
-            price: "$40,291",
-            change: "+0.25%",
-            isPositive: true,
-        },
-         {
-            icon: <FaEthereum className="text-purple-500 text-lg" />,
-            name: "Ethereum",
-            price: "$18,291",
-            change: "+0.25%",
-            isPositive: true,
-        },
-         {
-            icon: <SiLitecoin className="text-blue-500 text-lg" />,
-            name: "Litecoin",
-            price: "$8,291",
-            change: "+0.25%",
-            isPositive: true,
-        },
-         {
-            icon: <SiCardano className="text-green-500 text-lg" />,
-            name: "Cardano",
-            price: "$3,291",
-            change: "-2.05%",
-            isPositive: false,
-        },
-    ];
+  {
+  icon: <FaBitcoin className="text-yellow-400 text-lg" />,
+  name: "Bitcoin",
+  price: "$40,291",
+  change: "+0.25%",
+  stroke: "#FACC15",
+  chart: [40,20,45,25,50,30],
+   isPositive: true
+},
+  {
+    icon: <FaEthereum className="text-purple-500 text-lg" />,
+    name: "Ethereum",
+    price: "$18,291",
+    change: "+0.25%",
+    stroke: "#A855F7",
+    chart: [20,35,15,40,18,45],
+    isPositive: true
+  },
+  {
+    icon: <SiLitecoin className="text-blue-500 text-lg" />,
+    name: "Litecoin",
+    price: "$8,291",
+    change: "+0.25%",
+    stroke: "#3B82F6",
+    chart: [10,25,15,30,20,35],
+     isPositive: true
+  },
+  {
+    icon: <SiCardano className="text-green-500 text-lg" />,
+    name: "Cardano",
+    price: "$3,291",
+    change: "-2.05%",
+    stroke: "#22C55E",
+    chart: [30,10,35,15,40,20],
+     isPositive: false
+  }
+];
 
     return (
-        <div className="bg-white rounded-2xl shadow-md p-6 h-full flex flex-col">
+        <div className="bg-white rounded-2xl shadow-md p-6">
         
         <h2 className="text-lg font-semibold text-gray-800 mb-4">Live Market</h2>
 
@@ -66,11 +79,20 @@ const LiveMarket = () => {
     {coin.price}
   </p>
 
-  <div className="h-6 bg-gray-100 rounded-lg"></div>
+  <div className="h-8">
+  <ResponsiveContainer width="100%" height="100%">
+    <LineChart
+  data={coin.chart.map((v) => ({ v }))}
+>
+      <Line type="linear" dataKey="v" stroke={coin.stroke} strokeWidth={3}
+  dot={false}
+/>
+    </LineChart>
+  </ResponsiveContainer>
 </div>
-                
-            ))}
-        </div>
+                </div>
+              ))}
+            </div>
         </div>
     );
 }
