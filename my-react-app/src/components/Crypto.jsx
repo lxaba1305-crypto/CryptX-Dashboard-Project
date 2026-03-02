@@ -7,7 +7,7 @@ const Crypto = ({bgColor, icon, price, name, change, isPositive}) => {
 
 {/* Top row */}
 <div className="flex justify-between items-center mb-6">
-    <div className={`w-12 h-12 ${bgColor} flex items-center justify-centert rounded-lg`}>
+    <div className={`w-12 h-12 ${bgColor} flex items-center justify-center rounded-lg`}>
         {icon}
     </div>
 

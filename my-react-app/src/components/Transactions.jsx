@@ -9,28 +9,28 @@ const Transactions = () => {
             type: "Received",
             amount: "$24,102",
             time: "Today, 19:30",
-            isPositve: true,
+            isPositive: true,
         },
         {
             name: "Bitcoin",
             type: "Buy",
             amount: "$4,157",
             time: "Today, 14:32",
-            isPositve: false,
+            isPositive: false,
         },
           {
             name: "Bitcoin",
             type: "Buy",
             amount: "$64,784",
             time: "Today, 13:50",
-            isPositve: false,
+            isPositive: false,
         },
           {
             name: "Litecoin",
             type: "Buy",
             amount: "$14,265",
             time: "Today, 09:38",
-            isPositve: false,
+            isPositive: false,
         },
     ];
     return (

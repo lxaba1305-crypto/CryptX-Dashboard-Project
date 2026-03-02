@@ -1,7 +1,7 @@
 import React from "react";
 
-
-const SidebarItem = (active, label) => {
+// eslint-disable-next-line no-unused-vars
+const SidebarItem = ({ icon: Icon, label, active}) => {
     return(
 
     <div className={`flex items-center justify-between cursor-pointer ${

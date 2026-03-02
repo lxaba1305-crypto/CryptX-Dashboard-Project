@@ -22,7 +22,7 @@ function App() {
               <div className="lg:col-span-2">
             <Graph />
             </div>
-      
+      <LiveMarket />
             </div>
 
             <Transactions />
