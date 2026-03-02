@@ -1,5 +1,4 @@
 import React from 'react'
-import {FaArrowUp, FaArrowDown} from "react-icons/fa"
 
 const Crypto = ({bgColor, icon, price, name, change, isPositive}) => {
     return (
@@ -13,9 +12,9 @@ const Crypto = ({bgColor, icon, price, name, change, isPositive}) => {
 
     <div className="flex items-center space-x-2">
         {isPositive ? (
-            <FaArrowUp className="text-green-500 text-sm" />
+            <span className="text-green-500 text-sm">▲</span>
         ) : (
-            <FaArrowDown className="text-orange-400 text-sm" />
+            <span className="text-orange-400 text-sm">▼</span>
         )}
 
         <span className={`text-sm font-semibold ${isPositive ? "text-green-500" : "text-orange-400"}`}>
