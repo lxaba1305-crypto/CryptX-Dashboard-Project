@@ -1,6 +1,4 @@
 import React from "react";
-import {FaBitcoin, FaEthereum} from "react-icons/fa";
-import{ SiLitecoin, SiCardano } from "react-icons/si";
 import {
     LineChart,
     Line,
@@ -11,7 +9,7 @@ const LiveMarket = () => {
 
     const marketData = [
   {
-  icon: <FaBitcoin className="text-yellow-400 text-lg" />,
+  icon: "₿",
   name: "Bitcoin",
   price: "$40,291",
   change: "+0.25%",
@@ -20,7 +18,7 @@ const LiveMarket = () => {
    isPositive: true
 },
   {
-    icon: <FaEthereum className="text-purple-500 text-lg" />,
+    icon: "Ξ",
     name: "Ethereum",
     price: "$18,291",
     change: "+0.25%",
@@ -29,7 +27,7 @@ const LiveMarket = () => {
     isPositive: true
   },
   {
-    icon: <SiLitecoin className="text-blue-500 text-lg" />,
+    icon: "Ł",
     name: "Litecoin",
     price: "$8,291",
     change: "+0.25%",
@@ -38,7 +36,7 @@ const LiveMarket = () => {
      isPositive: true
   },
   {
-    icon: <SiCardano className="text-green-500 text-lg" />,
+    icon: "₳",
     name: "Cardano",
     price: "$3,291",
     change: "-2.05%",
@@ -58,7 +56,7 @@ const LiveMarket = () => {
                 <div key={index} className="grid grid-cols-4 items-center py-3 border-b border-gray-100">
 
   <div className="flex items-center space-x-3">
-    {coin.icon}
+    <span className="text-lg font-bold">{coin.icon}</span>
     <div>
       <p className="text-sm font-semibold text-gray-800">
         {coin.name}
