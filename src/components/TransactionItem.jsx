@@ -1,5 +1,4 @@
 import React from "react";
-import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 
 const TransactionItem = ({ name, type, amount, time, isPositive }) => {
     return (
@@ -11,9 +10,9 @@ const TransactionItem = ({ name, type, amount, time, isPositive }) => {
 
                 <div className={`w-10 h-10 rounded-full flex items-center justify-center ${isPositive ? "bg-green-100" : "bg-orange-100"}`}>
                     {isPositive ? (
-                        <FaArrowUp className="text-green-500 text-sm" />
+                        <span className="text-green-500 text-sm">▲</span>
                     ) : (
-                        <FaArrowDown className="text-orange-400 text-sm" />
+                        <span className="text-orange-400 text-sm">▼</span>
                     )}
                 </div>
 
