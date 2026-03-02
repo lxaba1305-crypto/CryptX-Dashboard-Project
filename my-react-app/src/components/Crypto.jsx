@@ -3,7 +3,7 @@ import {FaArrowUp, FaArrowDown} from "react-icons/fa"
 
 const Crypto = ({bgColor, icon, price, name, change, isPositive}) => {
     return (
-        <div className="bg-white p-6 rounded-xl shadow-md flex flex-col justify-between">
+        <div className="bg-white p-6 rounded-2xl shadow-md flex flex-col justify-between">
 
 {/* Top row */}
 <div className="flex justify-between items-center mb-6">

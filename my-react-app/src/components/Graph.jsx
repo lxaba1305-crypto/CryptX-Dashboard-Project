@@ -8,12 +8,6 @@ const Graph = () => {
             <div className="flex justify-between items-center mb-4">
                 <h2 className="text-lg font-semibold text-gray-800">BTC Prices</h2>
 
-                <div className="flex space-x-2 text-gray-500">
-                  <button className="px-3 py-1 text-xs font-medium rounded-md bg-gray-100 hover:bg-gray-200 transition">1D</button> 
-                   <button className="px-3 py-1 text-xs font-medium rounded-md bg-gray-100 hover:bg-gray-200 transition">1W</button>
-                    <button className="px-3 py-1 text-xs font-medium rounded-md bg-gray-100 hover:bg-gray-200 transition">1M</button>
-                     <button className="px-3 py-1 text-xs font-medium rounded-md bg-gray-100 hover:bg-gray-200 transition">1Y</button>  
-                </div>
             </div>
 
             <div className="flex-1 bg-gray-50 rounded-xl flex items-center justify-center min-h-[260px]">
