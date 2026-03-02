@@ -1,27 +1,46 @@
 import React from "react"
+import {
+    LineChart,
+    Line,
+    ResponsiveContainer,
+    Tooltip,
+    XAxis,
+    CartesianGrid,
+    YAxis
+ }
+    from "recharts";
+
+    const data = [
+        { name: "Jan",  value: 400 },
+        { name: "Mar",  value: 300 },
+        { name: "May",  value: 500 },
+        { name: "Jul",  value: 280 },
+        { name: "Sep",  value: 590 },
+        { name: "Nov",  value: 320 },
+    ]
 
 const Graph = () => {
     return (
-        <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col h-full">
-
-            {/* Header */}
-            <div className="flex justify-between items-center mb-4">
+        <div className="bg-white rounded-2xl shadow-md p-6  h-full">
                 <h2 className="text-lg font-semibold text-gray-800">BTC Prices</h2>
 
+            
+
+            <div className="h-72">
+                <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={data}>
+                    <CartesianGrid stroke="#f3f4f6" vertical={false} />
+                    <XAxis dataKey={name} tick={{fontSize: 12}} />
+                    <YAxis tick={{fontSize: 12}} />
+                    <Tooltip />
+                <Line type="monotone" dataKey="value" stroke="#6366f1" strokeWidth={3} dot={false} />
+
+            </LineChart>
+            </ResponsiveContainer>
+            </div>
             </div>
 
-            <div className="flex-1 bg-gray-50 rounded-xl flex items-center justify-center min-h-[260px]">
-                <span className="text-gray-300 text-sm tracking-wide">[Graph Placeholder]</span>
-            </div>
-
-            <div className="mt-6">
-                <div className="inline-block bg-purple-600 text-white px-4 py-2 rounded-xl font-semibold text-sm">
-                    $25,240
-                </div>
-                <div className="h-1.5 bg-purple-200 mt-3 rounded-full"></div>
-            </div>
-
-        </div>
+        
     );
 }
 

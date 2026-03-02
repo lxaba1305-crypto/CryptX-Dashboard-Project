@@ -42,27 +42,33 @@ const LiveMarket = () => {
 
         <div className="space-y-4">
             {marketData.map((coin,index) => (
-                <div key={index} className="flex items-center justify-between">
-                    <div className="flex items-center space-x-4">
-                        {coin.icon}
-                        <span className="text-sm font-medium text-gray-700">
-                            {coin.name}
-                        </span>
-                    </div>
+                <div key={index} className="grid grid-cols-4 items-center py-3 border-b border-gray-100">
 
-                    <div className="text-right">
-                        <p className="text-sm font-semibold text-gray-800">
-                            {coin.price}
-                        </p>
-                        <p className={`text-xs font-medium ${
-                            coin.isPositive 
-                            ? "text-green-500"
-                            : "text-orange-400"
-                        }`} >
-                            {coin.change}
-                        </p>
-                    </div>
-                </div>
+  <div className="flex items-center space-x-3">
+    {coin.icon}
+    <div>
+      <p className="text-sm font-semibold text-gray-800">
+        {coin.name}
+      </p>
+      <p className="text-xs text-gray-400">
+        ETH / USDT
+      </p>
+    </div>
+  </div>
+
+  <p className={`text-sm font-semibold ${
+    coin.isPositive ? "text-green-500" : "text-red-500"
+  }`}>
+    {coin.change}
+  </p>
+
+  <p className="text-sm font-semibold text-gray-800">
+    {coin.price}
+  </p>
+
+  <div className="h-6 bg-gray-100 rounded-lg"></div>
+</div>
+                
             ))}
         </div>
         </div>

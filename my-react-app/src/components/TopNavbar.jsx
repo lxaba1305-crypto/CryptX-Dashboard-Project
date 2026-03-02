@@ -20,7 +20,7 @@ const TopNavbar = () => {
         <div className="w-10 h-10 bg-gray-300 rounded-full"></div>
         <div className="flex flex-col leading-tight">
             <span className="font-semibold">John Doe</span>
-            <span className="text-gray-400 text-sm">@johndoe</span>
+            <span className="font-medium text-gray-800 text-sm">@johndoe</span>
         </div>
         <span className="text-gray-400 text-lg">⌄</span>
     </div>

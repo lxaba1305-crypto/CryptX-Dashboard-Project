@@ -34,7 +34,7 @@ const Transactions = () => {
         },
     ];
     return (
-       <div className="mt-10">
+       <div className="bg-white p-6 rounded-2xl shadow-sm">
 
         <h2 className="text-xl font-semibold text-gray-800 mb-4">Transactions</h2>
 
