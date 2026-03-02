@@ -1,22 +1,13 @@
 import React from 'react'
 import SidebarItem from "./SidebarItem";
-import {
-    FaTh,
-    FaChartPie,
-    FaWallet,
-    FaEnvelope,
-    FaCog,
-    FaSignOutAlt
-} from 'react-icons/fa';
-import { FaLink } from 'react-icons/fa';
 
 const menuItems = [
-    { name: 'Overview', icon: FaTh, active: true },
-    { name: 'Chart', icon: FaChartPie },
-    { name: 'Wallet', icon: FaWallet },
-    { name: 'Mailbox', icon: FaEnvelope },
-    { name: 'Settings', icon: FaCog },
-    { name: 'Logout', icon: FaSignOutAlt }
+    { name: 'Overview', icon: <span>📊</span>, active: true },
+    { name: 'Chart', icon: <span>📈</span> },
+    { name: 'Wallet', icon: <span>👛</span> },
+    { name: 'Mailbox', icon: <span>✉️</span> },
+    { name: 'Settings', icon: <span>⚙️</span> },
+    { name: 'Logout', icon: <span>🚪</span> }
 ];
 
 const Sidebar = () => {
@@ -26,7 +17,7 @@ const Sidebar = () => {
             {/* Logo */}
             <div>
                 <div className="flex items-center space-x-3 mb-12">
-                    <FaLink className="text-purple-600 w-8 h-8" />
+                    <span className="text-purple-600 text-2xl">🔗</span>
                     <span className="text-2xl font-semibold text-gray-900">CryptX</span>
                 </div>
 
